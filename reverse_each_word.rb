@@ -1,12 +1,18 @@
 
-def reverse_each_word (sentence1)
-%w sentence1.each {|word| word.reverse}
+def reverse_each_word (sentence)
+  string_array = sentence.split (" ")
+  reverse_array = []
+  string_array.each do |word|
+    reverse_array.push(word.reverse)
+  end
+  return reverse_array
 end
 
-def reverse_each_word (sentence2)
-%w sentence2.each {|word| word.reverse}
-end
-
-def use_collect (array)
-%w array.collect {|word| word.reverse}
+def reverse_each_word (sentence)
+  string_array = sentence.split (" ")
+  reverse_array = []
+  string_array.collect do |word|
+    reverse_array.push(word.reverse)
+  end
+  return reverse_array
 end
